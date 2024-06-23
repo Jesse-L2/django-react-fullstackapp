@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
 import api from "../../api";
+import "../styles/Form.css";
 
 function Form({ route, method }) {
   const [username, setUsername] = useState("");
@@ -31,7 +32,7 @@ function Form({ route, method }) {
   };
 
   return (
-    <form onSubmit={hanldeSubmit} className="form-container">
+    <form onSubmit={handleSubmit} className="form-container">
       <h1>{name}</h1>
       <input
         className="form-input"
